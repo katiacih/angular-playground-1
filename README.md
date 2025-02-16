@@ -11,6 +11,8 @@ Acessado em 02/02/2025 - https://www.w3schools.com/angular
 
 - Nodejs v18
 
+```npm install -g @angular/cli```
+
 
 ### criar projeto
 ```bash
