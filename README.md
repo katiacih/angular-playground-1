@@ -18,3 +18,9 @@ Acessado em 02/02/2025 - https://www.w3schools.com/angular
 ```bash
 ng new my-app
 ```
+
+
+criando novo componentes na pasta components
+```bash
+ng generate component components/my-component
+```
