@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { MyServiceService } from '../../services/my-service.service';
 
 
@@ -24,6 +24,8 @@ export class HomeComponent {
   atualizarState(value: boolean) {
     this.myState = value;
   }
+
+  @Input() minhaPropsDeFora!: string;
 
   // método que será chamado ao clicar no botão
   // o método irá atualizar o valor da variável myState
