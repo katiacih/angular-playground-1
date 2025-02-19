@@ -13,6 +13,10 @@ export class HomeComponent {
   myState: boolean = false;
   texto: string = 'Texto';
   ariaLabel: string = 'Aria Label';
+  showTitle: boolean = true;
+  title: string = 'Título';
+  subtitle: string = 'Subtítulo';
+  listItems: string[] = ['Item 1', 'Item 2', 'Item 3'];
 
 
   atualizarState(value: boolean) {

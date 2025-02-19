@@ -2,3 +2,16 @@
 <p>{{texto}}</p>
 
 <button  (click)="submit($event)">Button</button>
+
+
+@if(showTitle) {
+    <h1>{{title}}</h1>
+} @else {
+    <h2>{{subtitle}}</h2>
+}
+
+<ul>
+ @for(item of listItems; track item) {
+  <li>{{item}}</li>
+}
+</ul>
