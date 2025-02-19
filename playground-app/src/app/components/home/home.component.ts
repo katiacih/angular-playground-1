@@ -1,5 +1,6 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, Output } from '@angular/core';
 import { MyServiceService } from '../../services/my-service.service';
+import { EventEmitter } from '@angular/core';
 
 
 // decorador necessário para definir um componente
@@ -26,12 +27,14 @@ export class HomeComponent {
   }
 
   @Input() minhaPropsDeFora!: string;
+  @Output() minhaSaida = new EventEmitter<string>();
 
   // método que será chamado ao clicar no botão
   // o método irá atualizar o valor da variável myState
   submit(event: Event) {
     console.log('submit', event);
     this.myState = !this.myState;
+    this.minhaSaida.emit('Valor emitido');
     this.myService.submitService();
   }
 }
