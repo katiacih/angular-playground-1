@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MyServiceService } from '../../services/my-service.service';
 
 
 // decorador necessário para definir um componente
@@ -10,6 +11,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+   private myService = inject(MyServiceService);
   myState: boolean = false;
   texto: string = 'Texto';
   ariaLabel: string = 'Aria Label';
@@ -28,5 +30,6 @@ export class HomeComponent {
   submit(event: Event) {
     console.log('submit', event);
     this.myState = !this.myState;
+    this.myService.submitService();
   }
 }

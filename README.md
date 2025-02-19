@@ -22,3 +22,11 @@ criando novo componentes na pasta components
 ```bash
 ng generate component components/my-component
 ```
+Criando um service
+```bash
+ng generate service services/my-service
+
+ou 
+
+ng g s services/my-service
+```
