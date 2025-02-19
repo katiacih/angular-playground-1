@@ -10,5 +10,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  myState: boolean = false;
+
+
+  atualizarState(value: boolean) {
+    this.myState = value;
+  }
 
 }
